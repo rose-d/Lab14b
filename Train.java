@@ -16,7 +16,13 @@ The very first car added to the Train object is displayed at the (x,y) coordinat
 import java.util.*;
 public class Train
 {
-    ArrayList <RailCar> railCars = new ArrayList<RailCar> ();
+   ArrayList <RailCar> railCars = new ArrayList<RailCar> ();
+   
+   public Train ()
+   {
+       railCar(Cc,100,300);
+      
+   }
    
    public void addCar()
     {
