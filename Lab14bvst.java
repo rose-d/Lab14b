@@ -33,6 +33,7 @@ public class Lab14bvst extends Applet
    	public void paint(Graphics g)
    	{
       	Train train = new Train(100,300);
+      		// we need to make a constructor that accepts the parameters 100,300 to begin drawing the train at those points
       	train.addCar("Locomotive",Color.blue);
       	train.addCar("PassengerCar",Color.gray);
       	train.addCar("PassengerCar",Color.gray);
