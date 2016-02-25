@@ -29,9 +29,12 @@ public class Train
     }
 */
 
-   public void showCars()
+   public void showCars(Graphics g)
     {
-    
+     for(RailCar car: railCars)
+        {
+            
+        }
     }
 
 
