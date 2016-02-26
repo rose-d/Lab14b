@@ -18,9 +18,9 @@ public class Train
 {
    ArrayList <RailCar> railCars = new ArrayList<RailCar> ();
    
-   public Train ()
+   public Train (int x, int y)      // int x = 100, int y = 300
    {
-       railCar(Cc,100,300);
+      // railCar(Cc,100,300);
       
    }
    
