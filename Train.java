@@ -40,7 +40,7 @@ public void addCar(int location, String type, Color color)
     {
      for(RailCar car: railCars)
         {
-            
+           drawCar(g); 
         }
     }
 
