@@ -17,7 +17,7 @@ import java.util.*;
 public class Train
 {
    ArrayList <RailCar> railCars = new ArrayList<RailCar> ();
-
+//might have to do train.add methods
    
    public Train (int x, int y)      // int x = 100, int y = 300
    {
