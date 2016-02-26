@@ -62,8 +62,40 @@ public class Train
  
     public void addCar(int location, String type, Color color)
     {
+        //Use a counter to label each car with a number
+        // if (carNumber >= location)
+        //     x+=175;
+        //set an x value for the new car because it's different than the regular x value
+        // maybe xInsert = 
         
-   
+        
+   if (type.indexOf("Locomotive")== 0)
+      {
+       RailCar locomotive = new Locomotive (color, x,y);   
+       x+=175;
+       railCars.add(locomotive);
+      }
+      
+       if (type.indexOf("PassengerCar")== 0)
+      {
+       RailCar passenger = new PassengerCar (color, x,y);   
+       x+=175;
+       railCars.add(passenger);
+      }
+      
+       if (type.indexOf("FreightCar")== 0)
+      {
+       RailCar freight = new FreightCar (color, x,y);   
+       x+=175;
+       railCars.add(freight);
+      }
+      
+       if (type.indexOf("Caboose")== 0)
+      {
+       RailCar caboose = new Caboose (color, x,y);   
+       x+=175;
+       railCars.add(caboose);
+      }
     }
 
    public void showCars(Graphics g)
