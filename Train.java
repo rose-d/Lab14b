@@ -17,6 +17,7 @@ import java.util.*;
 public class Train
 {
    ArrayList <RailCar> railCars = new ArrayList<RailCar> ();
+
    
    public Train (int x, int y)      // int x = 100, int y = 300
    {
@@ -24,16 +25,16 @@ public class Train
       
    }
    
-   public void addCar()
+public void addCar(String type, Color color)  // 100 point version
     {
       
     }
  
-/* public void addCar(sequence number in the train)  // 100 point version
-    {
- 
-    }
-*/
+public void addCar(int location, String type, Color color)
+{
+   
+   
+}
 
    public void showCars(Graphics g)
     {
