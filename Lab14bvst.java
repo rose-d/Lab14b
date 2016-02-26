@@ -10,7 +10,7 @@ import java.applet.*;
 import java.util.ArrayList;
 
 
-public class Lab14bvst extends Applet
+/*public class Lab14bvst extends Applet		/80 pt version
 {
 	public void paint(Graphics g)
 	{
@@ -27,8 +27,8 @@ public class Lab14bvst extends Applet
          railCar.drawCar(g);
 	}
 }
-	
-/*	public class Lab14bv100 extends Applet
+*/	
+	public class Lab14bv100 extends Applet		//100 pt version
 	{
    	public void paint(Graphics g)
    	{
@@ -46,4 +46,4 @@ public class Lab14bvst extends Applet
    	}
 	}
 	
-*/
+
