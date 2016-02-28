@@ -71,7 +71,6 @@ public class Train
        RailCar locomotive = new Locomotive (color, x,y);   
        x = 100+(175*location);       
        railCars.add(location, locomotive);
-    
       }
       
        if (type.indexOf("PassengerCar")== 0)
@@ -79,7 +78,6 @@ public class Train
        RailCar passenger = new PassengerCar (color, x,y);   
        x = 100+(175*location);
        railCars.add(location, passenger);
-      
       }
       
        if (type.indexOf("FreightCar")== 0)
@@ -94,23 +92,22 @@ public class Train
        RailCar caboose = new Caboose (color, x,y);   
        x = 100+(175*location);
        railCars.add(location, caboose);
-       
-       for (RailCar car: railCars)
-       {
-         if ( carNumber>= location)
-        {x+=175;}
-
        }
        
-       
-     
-     int newLocation = location+1;
-     int newxPos = 100 + (newLocation*175);
+       for (int k=location+1; k<cars.size(); k++)
+       {
+        x+=175;
+        railCars.get(x);
+         int newLocation = location + 1;
+         int newxPos = 100 + (newLocation*175);
+
+       }}
+      
       
       
       
       }
-    }
+    
 
    public void showCars(Graphics g)
     {
