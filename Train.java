@@ -95,7 +95,7 @@ public class Train
        x = 100+(175*location);
        railCars.add(location, caboose);
        
-       for (Railcar car: railCars)
+       for (RailCar car: railCars)
        {
          if ( carNumber>= location)
         {x+=175;}
