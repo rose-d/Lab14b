@@ -104,8 +104,8 @@ public class Train
        
        
      
-      newLocation = location+1;
-      newxPos = 100 + (newLocation*175);
+     int newLocation = location+1;
+     int newxPos = 100 + (newLocation*175);
       
       
       
