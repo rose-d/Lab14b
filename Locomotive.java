@@ -52,4 +52,3 @@ public class Locomotive extends RailCar
 	   g.fillPolygon(funnel);
 	}
 }
-
