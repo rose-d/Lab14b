@@ -9,7 +9,7 @@ import java.awt.*;
 class PassengerCar extends RailCar
 {
 	private Color carColor;
-	private int xPos;
+	public int xPos;
 	private int yPos;
 
 	public PassengerCar(Color cC, int xPos, int yPos)
