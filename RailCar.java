@@ -11,7 +11,7 @@ import java.awt.*;
 public class RailCar
 {
 	private Color carColor;
-	private int xPos;
+	public int xPos;
 	private int yPos;
 
 	public RailCar(Color cC, int xP, int yP)
@@ -30,6 +30,7 @@ public class RailCar
    
    private void drawContainer(Graphics g)
    {
+      System.out.println(carColor+" "+xPos+" "+yPos);
    	g.setColor(carColor);
    	g.fillRect(xPos,yPos,150,100);
    }
@@ -47,4 +48,3 @@ public class RailCar
       g.fillRect(xPos-25,yPos+80,25,5);
    } 
 }
-
