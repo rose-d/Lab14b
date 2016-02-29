@@ -20,6 +20,8 @@ public class Train
    private int x;
    private int y;
    private int carNumber;
+   private int xPos;
+   private int newxPos;
    
    public Train (int x, int y)      // int x = 100, int y = 300
    {
@@ -29,7 +31,7 @@ public class Train
    
     public void addCar(String type, Color color)  
     { 
-      
+     
       if (type.indexOf("Locomotive")== 0)
       {
        RailCar locomotive = new Locomotive (color, x,y);   
@@ -43,7 +45,7 @@ public class Train
        x+=175;
        railCars.add(passenger);
       }
-      
+         
        if (type.indexOf("FreightCar")== 0)
       {
        RailCar freight = new FreightCar (color, x,y);   
@@ -59,62 +61,54 @@ public class Train
       }
     }
  
-    public void addCar(int location, String type, Color color)
-    {
-        //Use a counter to label each car with a number
-        //set an x value for the new car because it's different than the regular x value
-        // maybe xInsert = 
-     
-        
-   if (type.indexOf("Locomotive")== 0)
+
+    public void addCar(int location,String type, Color color)  
+    { 
+      x = 100+(175*(location-1));
+      
+      if (type.indexOf("Locomotive")== 0)
       {
+      
        RailCar locomotive = new Locomotive (color, x,y);   
-       x = 100+(175*location);       
-       railCars.add(location, locomotive);
+       railCars.add(location-1,locomotive);
       }
       
        if (type.indexOf("PassengerCar")== 0)
       {
        RailCar passenger = new PassengerCar (color, x,y);   
-       x = 100+(175*location);
-       railCars.add(location, passenger);
+       railCars.add(location-1,passenger);
       }
-      
+         
        if (type.indexOf("FreightCar")== 0)
       {
        RailCar freight = new FreightCar (color, x,y);   
-       x = 100+(175*location);
-       railCars.add(location, freight);
+       railCars.add(location-1,freight);
       }
       
        if (type.indexOf("Caboose")== 0)
       {
        RailCar caboose = new Caboose (color, x,y);   
-       x = 100+(175*location);
-       railCars.add(location, caboose);
-       }
-       
-       for (int k=location+1; k<cars.size(); k++)
-       {
-        x+=175;
-        railCars.get(x);
-         int newLocation = location + 1;
-         int newxPos = 100 + (newLocation*175);
-
-       }}
-      
-      
-      
-      
+       railCars.add(location-1,caboose);
       }
-    
+      
+      for (int i=location; i<railCars.size(); i++)
+      {
+         RailCar car = railCars.get(i);
+         car.xPos = car.xPos + 175;
+         railCars.remove(i);
+         railCars.add(i, car);
+      }
+    }
+ 
 
    public void showCars(Graphics g)
     {
-     for(RailCar car: railCars)
+           
+       for(RailCar car: railCars)
         {
-           car.drawCar(g); 
+          car.drawCar(g); 
         }
+
     }
 
 
