@@ -9,7 +9,7 @@ import java.awt.*;
 public class Caboose extends RailCar
 {
 	private Color carColor;
-	private int xPos;
+	public int xPos;
 	private int yPos;
 
 	public Caboose(Color cC, int xPos, int yPos)
@@ -42,4 +42,3 @@ public class Caboose extends RailCar
 	    g.fillRect(xPos+25,yPos-30,100,5);
 	}
 }
-
