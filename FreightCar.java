@@ -1,15 +1,10 @@
-// FreightCar.java
-// This is one of the student starting files
-// of the Lab14b lab assignment.
-
-
 import java.awt.*;
 
 
 public class FreightCar extends RailCar
 {
 	private Color carColor;
-	private int xPos;
+	public int xPos;
 	private int yPos;
 
 	public FreightCar(Color cC, int xPos, int yPos)
@@ -39,4 +34,3 @@ public class FreightCar extends RailCar
       g.fillRect(xPos+80,yPos+35,5,15);
 	}
  }
-
