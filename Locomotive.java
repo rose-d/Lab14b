@@ -1,6 +1,5 @@
 // Locomotive.java
-// This is one of the student starting files
-// of the Lab14b lab assignment.
+//a moveCar() method was added to this file to move the cars accordingly 
 
 
 import java.awt.*;
@@ -9,7 +8,7 @@ import java.awt.*;
 public class Locomotive extends RailCar
 {
 	private Color carColor;
-	private int xPos;
+	public int xPos;
 	private int yPos;
 
 	public Locomotive(Color cC, int xPos, int yPos)
@@ -19,6 +18,14 @@ public class Locomotive extends RailCar
       this.xPos = xPos;
       this.yPos = yPos;
    }
+   
+   
+   public void moveCar() //added method
+   {
+      super.moveCar(); //calls the moveCar() method from the superclass (RailCar)
+      this.xPos += 175; //moves the car 175 units to the right (in the x direction) to accomodate for the inserted car
+   }
+
 
 	public void drawCar(Graphics g)
 	{
