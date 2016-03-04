@@ -1,6 +1,5 @@
 // PassengerCar.java
-// This is one of the student starting files
-// of the Lab14b lab assignment.
+//a moveCar() method was added to this file to move the cars accordingly 
 
 
 import java.awt.*;
@@ -26,6 +25,12 @@ class PassengerCar extends RailCar
 		drawWindows(g);
       drawRoof(g);
 	}
+
+   public void moveCar() //added method
+   {
+      super.moveCar(); //calls the moveCar() method from the superclass (RailCar)
+      this.xPos += 175; //moves the car 175 units to the right (in the x direction) to accomodate for the inserted car
+   }
 
 	private void drawWindows(Graphics g)
 	{
