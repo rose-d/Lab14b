@@ -1,8 +1,4 @@
 // RailCar.java
-// This is the <RailCar> class that is the 
-// super class for other train classes.
-// This is one of the student starting files
-// of the Lab14b lab assignment.
 
 
 import java.awt.*;
@@ -11,7 +7,7 @@ import java.awt.*;
 public class RailCar
 {
 	private Color carColor;
-	public int xPos;
+	private  int xPos;
 	private int yPos;
 
 	public RailCar(Color cC, int xP, int yP)
@@ -28,9 +24,13 @@ public class RailCar
       drawLink(g);
 	}
    
+   public void moveCar() //added method: this method is called by all the subclasses
+   {
+      this.xPos += 175; //shifts the x position to the right by 175 units
+   };
+      
    private void drawContainer(Graphics g)
    {
-      System.out.println(carColor+" "+xPos+" "+yPos);
    	g.setColor(carColor);
    	g.fillRect(xPos,yPos,150,100);
    }
