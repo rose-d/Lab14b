@@ -1,3 +1,8 @@
+// FreightCar.java
+//a moveCar() method was added to this file to move the cars accordingly 
+
+
+
 import java.awt.*;
 
 
@@ -21,6 +26,12 @@ public class FreightCar extends RailCar
 		drawFreightDoors(g);
 	}
    
+   public void moveCar() //added method
+   {
+      super.moveCar(); //calls the moveCar() method from the superclass (RailCar)
+      this.xPos += 175; //moves the car 175 units to the right (in the x direction) to accomodate for the inserted car
+   }
+
 	private void drawFreightDoors(Graphics g)
 	{
 		g.setColor(Color.black);
