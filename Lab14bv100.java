@@ -1,5 +1,7 @@
-// This file tests all the classes together.
-// and draws a train without proper OOP design.
+//Lab14bv100stAvadhutaandDeterman
+//Sravya Avadhuta and Rose Determan
+//This file was given.
+//The purpose of this lab is to write a program with proper Object Oriented Programming Features.
 
 
 import java.awt.*;
@@ -7,7 +9,7 @@ import java.applet.*;
 import java.util.ArrayList;
 
 
-public class Lab14bv100 extends Applet
+public class Lab14bv100stAvadhutaandDeterman extends Applet
 	{
    	public void paint(Graphics g)
    	{
